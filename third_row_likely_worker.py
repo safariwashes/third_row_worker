@@ -5,7 +5,7 @@ import time
 from datetime import datetime, timedelta, timezone
 from typing import Optional, Tuple
 
-import psycopg2
+import psycopg
 
 # =========================
 # Env / Config
@@ -252,7 +252,7 @@ def main():
     while True:
         conn = None
         try:
-            conn = psycopg2.connect(
+            conn = psycopg.connect(
                 dbname=DB_NAME,
                 user=DB_USER,
                 password=DB_PASSWORD,
